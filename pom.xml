@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.sireum.hamr.inspector</groupId>
+    <artifactId>inspector-bom</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Inspector BOM</name>
+    <description>Bill of materials to ensure consistent dependency versions for HAMR Inspector.</description>
+    <url>https://github.com/sireum/kekinian</url>
+    <organization>
+        <name>Santos Lab</name>
+        <url>http://santoslab.org</url>
+    </organization>
+    <!-- todo licenses -->
+    <!-- todo developers -->
+
+    <!-- todo: if possible, can jitpack be added as repo? should it? -->
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+    <properties>
+        <sireum.version>3.3.1</sireum.version>
+        <art.version>0.1.0-SNAPSHOT</art.version>
+        <java.version>11</java.version>
+        <scala.version>2.12.7</scala.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.sireum</groupId>
+                <artifactId>library_2.12</artifactId>
+                <version>${sireum.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.sireum</groupId>
+                <artifactId>art_2.12</artifactId>
+                <version>${art.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.MatthewWeisCaps</groupId>
+                <artifactId>inspector-capabilities</artifactId>
+                <version>master-97ad2111fb-1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.MatthewWeisCaps</groupId>
+                <artifactId>inspector-stream</artifactId>
+                <version>master-c77d5238e5-1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.MatthewWeisCaps</groupId>
+                <artifactId>inspector-common</artifactId>
+                <version>master-425bfca566-1</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+
+</project>
