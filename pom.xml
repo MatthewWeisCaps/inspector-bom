@@ -4,7 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.sireum.hamr.inspector</groupId>
+    <!-- see link below for list of defaults -->
+    <!-- https://docs.spring.io/spring-boot/docs/2.2.4.RELEASE/reference/htmlsingle/#dependency-versions-coordinates -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.4.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>org.sireum.hamr</groupId>
     <artifactId>inspector-bom</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -18,42 +27,25 @@
     <!-- todo licenses -->
     <!-- todo developers -->
 
-    <!-- todo: if possible, can jitpack be added as repo? should it? -->
-    <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
-
-    <properties>
-        <sireum.version>3.3.1</sireum.version>
-        <art.version>0.1.0-SNAPSHOT</art.version>
-        <java.version>11</java.version>
-        <scala.version>2.12.7</scala.version>
-    </properties>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.sireum</groupId>
                 <artifactId>library_2.12</artifactId>
-                <version>${sireum.version}</version>
+                <version>3.3.1</version>
             </dependency>
             <dependency>
                 <groupId>org.sireum</groupId>
                 <artifactId>art_2.12</artifactId>
-                <version>${art.version}</version>
+                <version>0.1.0-SNAPSHOT</version>
                 <scope>provided</scope>
             </dependency>
-
             <!-- inspector services (generic API for service implementations) -->
             <dependency>
                 <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-services</artifactId>
                 <version>05f4bf39af</version>
             </dependency>
-
             <dependency>
                 <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-capabilities</artifactId>
@@ -70,13 +62,10 @@
                 <version>master-425bfca566-1</version>
             </dependency>
             <dependency>
-                <groupId>org.jetbrains</groupId>
-                <artifactId>annotations</artifactId>
-                <version>17.0.0</version>
+                <groupId>org.scala-lang</groupId>
+                <artifactId>scala-library</artifactId>
+                <version>2.12.7</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-
-
 </project>
