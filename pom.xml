@@ -47,6 +47,13 @@
                 <scope>provided</scope>
             </dependency>
 
+            <!-- inspector services (generic API for service implementations) -->
+            <dependency>
+                <groupId>com.github.MatthewWeisCaps</groupId>
+                <artifactId>inspector-services</artifactId>
+                <version>05f4bf39af</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-capabilities</artifactId>
