@@ -4,10 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- see link below for list of defaults -->
+    <!-- https://docs.spring.io/spring-boot/docs/2.2.4.RELEASE/reference/htmlsingle/#dependency-versions-coordinates -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.0.M6</version>
+        <version>2.2.4.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -25,17 +27,6 @@
     <!-- todo licenses -->
     <!-- todo developers -->
 
-    <repositories>
-        <repository>
-            <id>spring-milestones</id>
-            <url>https://repo.spring.io/milestone</url>
-        </repository>
-<!--        <repository>-->
-<!--            <id>jitpack.io</id>-->
-<!--            <url>https://jitpack.io</url>-->
-<!--        </repository>-->
-    </repositories>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -49,14 +40,12 @@
                 <version>0.1.0-SNAPSHOT</version>
                 <scope>provided</scope>
             </dependency>
-
             <!-- inspector services (generic API for service implementations) -->
             <dependency>
                 <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-services</artifactId>
                 <version>05f4bf39af</version>
             </dependency>
-
             <dependency>
                 <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-capabilities</artifactId>
@@ -71,6 +60,11 @@
                 <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-common</artifactId>
                 <version>master-425bfca566-1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.scala-lang</groupId>
+                <artifactId>scala-library</artifactId>
+                <version>2.12.7</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
