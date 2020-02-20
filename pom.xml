@@ -116,18 +116,6 @@
                             </configuration>
                         </execution>
                         <execution>
-                            <id>generate-resources</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>add-resource</goal>
-                            </goals>
-                            <configuration>
-                                <resources>
-                                    <resource>${project.basedir}/src/main/resources</resource>
-                                </resources>
-                            </configuration>
-                        </execution>
-                        <execution>
                             <id>generate-test-sources</id>
                             <phase>generate-test-sources</phase>
                             <goals>
@@ -138,18 +126,6 @@
                                     <source>${project.basedir}/src/test/java</source>
                                     <source>${project.basedir}/src/test/scala</source>
                                 </sources>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>generate-test-resources</id>
-                            <phase>generate-test-resources</phase>
-                            <goals>
-                                <goal>add-test-resource</goal>
-                            </goals>
-                            <configuration>
-                                <resources>
-                                    <resource>${project.basedir}/src/test/resources</resource>
-                                </resources>
                             </configuration>
                         </execution>
                     </executions>
