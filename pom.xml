@@ -7,7 +7,7 @@
     <!-- https://docs.spring.io/spring-boot/docs/2.2.4.RELEASE/reference/htmlsingle/#dependency-versions-coordinates -->
     <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
+        <artifactId>spring-boot-dependencies</artifactId>
         <version>2.2.4.RELEASE</version>
         <relativePath/>
     </parent>
