@@ -99,6 +99,62 @@
         <pluginManagement>
             <plugins>
                 <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <id>generate-sources</id>
+                            <phase>generate-sources</phase>
+                            <goals>
+                                <goal>add-source</goal>
+                            </goals>
+                            <configuration>
+                                <sources>
+                                    <source>${project.basedir}/src/main/java</source>
+                                    <source>${project.basedir}/src/main/scala</source>
+                                </sources>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>generate-resources</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>add-resource</goal>
+                            </goals>
+                            <configuration>
+                                <resources>
+                                    <resource>${project.basedir}/src/main/resources</resource>
+                                </resources>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>generate-test-sources</id>
+                            <phase>generate-test-sources</phase>
+                            <goals>
+                                <goal>add-test-source</goal>
+                            </goals>
+                            <configuration>
+                                <sources>
+                                    <source>${project.basedir}/src/test/java</source>
+                                    <source>${project.basedir}/src/test/scala</source>
+                                </sources>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>generate-test-resources</id>
+                            <phase>generate-test-resources</phase>
+                            <goals>
+                                <goal>add-test-resource</goal>
+                            </goals>
+                            <configuration>
+                                <resources>
+                                    <resource>${project.basedir}/src/test/resources</resource>
+                                </resources>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
                     <groupId>net.alchim31.maven</groupId>
                     <artifactId>scala-maven-plugin</artifactId>
                     <version>4.3.1</version>
@@ -107,7 +163,7 @@
                             <id>scala-compile-first</id>
                             <phase>process-resources</phase>
                             <goals>
-                                <goal>add-source</goal>
+<!--                                <goal>add-source</goal>-->
                                 <goal>compile</goal>
                             </goals>
                         </execution>
