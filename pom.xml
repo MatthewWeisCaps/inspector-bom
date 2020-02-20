@@ -27,8 +27,8 @@
     <properties>
         <java.version>11</java.version>
         <scala.version>2.12.7</scala.version>
-<!--        <maven.compiler.source>${java.version}</maven.compiler.source>-->
-<!--        <maven.compiler.target>${java.version}</maven.compiler.target>-->
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sireum.version>3.3.1</sireum.version>
         <art.version>0.1.0-SNAPSHOT</art.version>
@@ -120,8 +120,6 @@
                         </execution>
                     </executions>
                     <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
                         <scalaVersion>${scala.version}</scalaVersion>
                     </configuration>
                 </plugin>
