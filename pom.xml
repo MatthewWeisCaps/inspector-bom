@@ -99,28 +99,9 @@
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>build-helper-maven-plugin</artifactId>
-                    <version>3.0.0</version>
-                    <executions>
-                        <execution>
-                            <phase>generate-sources</phase>
-                            <goals>
-                                <goal>add-source</goal>
-                            </goals>
-                            <configuration>
-                                <sources>
-                                    <source>${project.basedir}/src/main/java</source>
-                                    <source>${project.basedir}/src/main/scala</source>
-                                </sources>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
                     <groupId>net.alchim31.maven</groupId>
                     <artifactId>scala-maven-plugin</artifactId>
-                    <version>4.2.0</version>
+                    <version>4.3.1</version>
                     <executions>
                         <execution>
                             <id>scala-compile-first</id>
@@ -131,9 +112,9 @@
                             </goals>
                         </execution>
                         <execution>
-                            <phase>compile</phase>
+                            <id>scala-test-compile</id>
+                            <phase>process-test-resources</phase>
                             <goals>
-                                <goal>compile</goal>
                                 <goal>testCompile</goal>
                             </goals>
                         </execution>
@@ -141,6 +122,22 @@
                     <configuration>
                         <scalaVersion>${scala.version}</scalaVersion>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>compile</goal>
+                            </goals>
+                            <configuration>
+<!--                                <source>${maven.compiler.source}</source>-->
+<!--                                <target>${maven.compiler.target}</target>-->
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
