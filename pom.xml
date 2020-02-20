@@ -27,40 +27,26 @@
     <!-- todo licenses -->
     <!-- todo developers -->
 
+    <properties>
+        <java.version>11</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <sireum.version>3.3.1</sireum.version>
+        <art.version>0.1.0-SNAPSHOT</art.version>
+
+        <inspector.version>0.1-SNAPSHOT</inspector.version>
+        <inspector-capabilities.version>${inspector.version}</inspector-capabilities.version>
+        <inspector-capabilities-redis.version>${inspector.version}</inspector-capabilities-redis.version>
+        <inspector-common.version>${inspector.version}</inspector-common.version>
+        <inspector-services.version>${inspector.version}</inspector-services.version>
+        <inspector-services-redis.version>${inspector.version}</inspector-services-redis.version>
+        <inspector-stream.version>${inspector.version}</inspector-stream.version>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.sireum</groupId>
-                <artifactId>library_2.12</artifactId>
-                <version>3.3.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.sireum</groupId>
-                <artifactId>art_2.12</artifactId>
-                <version>0.1.0-SNAPSHOT</version>
-                <scope>provided</scope>
-            </dependency>
-            <!-- inspector services (generic API for service implementations) -->
-            <dependency>
-                <groupId>com.github.MatthewWeisCaps</groupId>
-                <artifactId>inspector-services</artifactId>
-                <version>05f4bf39af</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.MatthewWeisCaps</groupId>
-                <artifactId>inspector-capabilities</artifactId>
-                <version>master-97ad2111fb-1</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.MatthewWeisCaps</groupId>
-                <artifactId>inspector-stream</artifactId>
-                <version>master-c77d5238e5-1</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.MatthewWeisCaps</groupId>
-                <artifactId>inspector-common</artifactId>
-                <version>master-425bfca566-1</version>
-            </dependency>
             <dependency>
                 <groupId>org.scala-lang</groupId>
                 <artifactId>scala-library</artifactId>
@@ -70,6 +56,47 @@
                 <groupId>org.jetbrains</groupId>
                 <artifactId>annotations</artifactId>
                 <version>17.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.sireum</groupId>
+                <artifactId>library_2.12</artifactId>
+                <version>${sireum.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.sireum</groupId>
+                <artifactId>art_2.12</artifactId>
+                <version>${art.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.github.MatthewWeisCaps</groupId>
+                <artifactId>inspector-capabilities</artifactId>
+                <version>${inspector-capabilities.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.MatthewWeisCaps</groupId>
+                <artifactId>inspector-capabilities-redis</artifactId>
+                <version>${inspector-capabilities-redis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.MatthewWeisCaps</groupId>
+                <artifactId>inspector-common</artifactId>
+                <version>${inspector-common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.MatthewWeisCaps</groupId>
+                <artifactId>inspector-services</artifactId>
+                <version>${inspector-services.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.MatthewWeisCaps</groupId>
+                <artifactId>inspector-services-redis</artifactId>
+                <version>${inspector-services-redis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.MatthewWeisCaps</groupId>
+                <artifactId>inspector-stream</artifactId>
+                <version>${inspector-stream.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
