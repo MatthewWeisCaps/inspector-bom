@@ -84,6 +84,11 @@
             </dependency>
             <dependency>
                 <groupId>com.github.MatthewWeisCaps</groupId>
+                <artifactId>inspector-gui</artifactId>
+                <version>${inspector-gui.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-services</artifactId>
                 <version>${inspector-services.version}</version>
             </dependency>
