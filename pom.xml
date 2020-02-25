@@ -39,6 +39,7 @@
         <inspector-capabilities.version>${inspector.version}</inspector-capabilities.version>
         <inspector-capabilities-redis.version>${inspector.version}</inspector-capabilities-redis.version>
         <inspector-common.version>${inspector.version}</inspector-common.version>
+        <inspector-gui.version>${inspector.version}</inspector-gui.version>
         <inspector-services.version>${inspector.version}</inspector-services.version>
         <inspector-services-redis.version>${inspector.version}</inspector-services-redis.version>
         <inspector-stream.version>${inspector.version}</inspector-stream.version>
