@@ -50,16 +50,19 @@
                 <groupId>org.scala-lang</groupId>
                 <artifactId>scala-library</artifactId>
                 <version>2.12.7</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jetbrains</groupId>
                 <artifactId>annotations</artifactId>
                 <version>17.0.0</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.sireum</groupId>
                 <artifactId>library_2.12</artifactId>
                 <version>${sireum.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.sireum</groupId>
@@ -71,36 +74,43 @@
                 <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-capabilities</artifactId>
                 <version>${inspector-capabilities.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-capabilities-redis</artifactId>
                 <version>${inspector-capabilities-redis.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-common</artifactId>
                 <version>${inspector-common.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-gui</artifactId>
                 <version>${inspector-gui.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-services</artifactId>
                 <version>${inspector-services.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-services-redis</artifactId>
                 <version>${inspector-services-redis.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-stream</artifactId>
                 <version>${inspector-stream.version}</version>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
