@@ -13,7 +13,7 @@
     </parent>
     <groupId>org.sireum.hamr</groupId>
     <artifactId>inspector-bom</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Inspector BOM</name>
     <description>Bill of materials to ensure consistent dependency versions for HAMR Inspector.</description>
