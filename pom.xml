@@ -26,7 +26,7 @@
     <!-- todo developers -->
     <properties>
         <scala.version>2.12.10</scala.version>
-        <sireum.version>3.3.1</sireum.version>
+        <sireum.version>76a1fa2</sireum.version>
         <art.version>260fd0d</art.version>
 
         <!-- these properties, as well as the plugin configurations using them, are redeclared in every child due a jitpack quirk -->
@@ -47,12 +47,6 @@
     </properties>
     <dependencyManagement>
         <dependencies>
-<!--            <dependency>-->
-<!--                <groupId>org.scala-lang</groupId>-->
-<!--                <artifactId>scala-library</artifactId>-->
-<!--                <version>${scala.version}</version>-->
-<!--                <scope>provided</scope>-->
-<!--            </dependency>-->
             <dependency>
                 <groupId>org.jetbrains</groupId>
                 <artifactId>annotations</artifactId>
@@ -60,7 +54,7 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>org.sireum</groupId>
+                <groupId>org.sireum.runtime</groupId>
                 <artifactId>library_2.12</artifactId>
                 <version>${sireum.version}</version>
                 <scope>provided</scope>
