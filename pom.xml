@@ -13,7 +13,7 @@
     </parent>
     <groupId>org.sireum.hamr</groupId>
     <artifactId>inspector-bom</artifactId>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.4-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Inspector BOM</name>
     <description>Bill of materials to ensure consistent dependency versions for HAMR Inspector.</description>
@@ -35,7 +35,7 @@
         <maven.compiler.target>11</maven.compiler.target>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <inspector.version>0.3-SNAPSHOT</inspector.version>
+        <inspector.version>0.4-SNAPSHOT</inspector.version>
         <inspector-capabilities.version>${inspector.version}</inspector-capabilities.version>
         <inspector-capabilities-redis.version>${inspector.version}</inspector-capabilities-redis.version>
         <inspector-common.version>${inspector.version}</inspector-common.version>
