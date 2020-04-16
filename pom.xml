@@ -13,7 +13,7 @@
     </parent>
     <groupId>org.sireum.hamr</groupId>
     <artifactId>inspector-bom</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>0.3-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Inspector BOM</name>
     <description>Bill of materials to ensure consistent dependency versions for HAMR Inspector.</description>
@@ -26,8 +26,8 @@
     <!-- todo developers -->
     <properties>
         <scala.version>2.12.10</scala.version>
-        <sireum.version>RELEASE</sireum.version>
-        <art.version>RELEASE</art.version>
+        <sireum.version>3.3.1</sireum.version>
+        <art.version>260fd0d</art.version>
 
         <!-- these properties, as well as the plugin configurations using them, are redeclared in every child due a jitpack quirk -->
         <java.version>11</java.version>
@@ -47,12 +47,12 @@
     </properties>
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.scala-lang</groupId>
-                <artifactId>scala-library</artifactId>
-                <version>${scala.version}</version>
-                <scope>provided</scope>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.scala-lang</groupId>-->
+<!--                <artifactId>scala-library</artifactId>-->
+<!--                <version>${scala.version}</version>-->
+<!--                <scope>provided</scope>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>org.jetbrains</groupId>
                 <artifactId>annotations</artifactId>
@@ -60,7 +60,7 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>org.sireum.runtime</groupId>
+                <groupId>org.sireum</groupId>
                 <artifactId>library_2.12</artifactId>
                 <version>${sireum.version}</version>
                 <scope>provided</scope>
