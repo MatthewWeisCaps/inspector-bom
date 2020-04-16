@@ -26,8 +26,8 @@
     <!-- todo developers -->
     <properties>
         <scala.version>2.12.10</scala.version>
-        <sireum.version>76a1fa2</sireum.version>
-        <art.version>260fd0d</art.version>
+        <sireum.version>RELEASE</sireum.version>
+        <art.version>RELEASE</art.version>
 
         <!-- these properties, as well as the plugin configurations using them, are redeclared in every child due a jitpack quirk -->
         <java.version>11</java.version>
@@ -35,13 +35,14 @@
         <maven.compiler.target>11</maven.compiler.target>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <inspector.version>0.2-SNAPSHOT</inspector.version>
+        <inspector.version>0.3-SNAPSHOT</inspector.version>
         <inspector-capabilities.version>${inspector.version}</inspector-capabilities.version>
         <inspector-capabilities-redis.version>${inspector.version}</inspector-capabilities-redis.version>
         <inspector-common.version>${inspector.version}</inspector-common.version>
         <inspector-gui.version>${inspector.version}</inspector-gui.version>
         <inspector-services.version>${inspector.version}</inspector-services.version>
         <inspector-services-redis.version>${inspector.version}</inspector-services-redis.version>
+        <inspector-services-jvm.version>${inspector.version}</inspector-services-jvm.version>
         <inspector-stream.version>${inspector.version}</inspector-stream.version>
     </properties>
     <dependencyManagement>
@@ -98,6 +99,12 @@
                 <groupId>com.github.MatthewWeisCaps</groupId>
                 <artifactId>inspector-services</artifactId>
                 <version>${inspector-services.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.github.MatthewWeisCaps</groupId>
+                <artifactId>inspector-services-jvm</artifactId>
+                <version>${inspector-services-jvm.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -186,6 +193,18 @@
                                 <source>${java.version}</source>
                                 <target>${java.version}</target>
                             </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>jar-no-fork</goal>
+                            </goals>
                         </execution>
                     </executions>
                 </plugin>
