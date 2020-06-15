@@ -13,7 +13,7 @@
     </parent>
     <groupId>org.sireum.hamr</groupId>
     <artifactId>inspector-bom</artifactId>
-    <version>0.4-SNAPSHOT</version>
+    <version>0.5-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Inspector BOM</name>
     <description>Bill of materials to ensure consistent dependency versions for HAMR Inspector.</description>
@@ -25,17 +25,17 @@
     <!-- todo licenses -->
     <!-- todo developers -->
     <properties>
-        <scala.version>2.12.10</scala.version>
-        <sireum.version>76a1fa2</sireum.version>
+        <scala.version>2.12.11</scala.version>
+        <sireum.version>2257178</sireum.version>
         <art.version>260fd0d</art.version>
 
         <!-- these properties, as well as the plugin configurations using them, are redeclared in every child due a jitpack quirk -->
-        <java.version>11</java.version>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <java.version>14</java.version>
+        <maven.compiler.source>14</maven.compiler.source>
+        <maven.compiler.target>14</maven.compiler.target>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <inspector.version>0.4-SNAPSHOT</inspector.version>
+        <inspector.version>0.5-SNAPSHOT</inspector.version>
         <inspector-capabilities.version>${inspector.version}</inspector-capabilities.version>
         <inspector-capabilities-redis.version>${inspector.version}</inspector-capabilities-redis.version>
         <inspector-common.version>${inspector.version}</inspector-common.version>
@@ -51,67 +51,61 @@
                 <groupId>org.jetbrains</groupId>
                 <artifactId>annotations</artifactId>
                 <version>17.0.0</version>
-                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.30</version>
             </dependency>
             <dependency>
                 <groupId>org.sireum.runtime</groupId>
                 <artifactId>library_2.12</artifactId>
                 <version>${sireum.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.sireum.slang-embedded-art</groupId>
                 <artifactId>slang-embedded-art_2.12</artifactId>
                 <version>${art.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.github.MatthewWeisCaps</groupId>
+                <groupId>org.sireum.hamr</groupId>
                 <artifactId>inspector-capabilities</artifactId>
                 <version>${inspector-capabilities.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.github.MatthewWeisCaps</groupId>
+                <groupId>org.sireum.hamr</groupId>
                 <artifactId>inspector-capabilities-redis</artifactId>
                 <version>${inspector-capabilities-redis.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.github.MatthewWeisCaps</groupId>
+                <groupId>org.sireum.hamr</groupId>
                 <artifactId>inspector-common</artifactId>
                 <version>${inspector-common.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.github.MatthewWeisCaps</groupId>
+                <groupId>org.sireum.hamr</groupId>
                 <artifactId>inspector-gui</artifactId>
                 <version>${inspector-gui.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.github.MatthewWeisCaps</groupId>
+                <groupId>org.sireum.hamr</groupId>
                 <artifactId>inspector-services</artifactId>
                 <version>${inspector-services.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.github.MatthewWeisCaps</groupId>
+                <groupId>org.sireum.hamr</groupId>
                 <artifactId>inspector-services-jvm</artifactId>
                 <version>${inspector-services-jvm.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.github.MatthewWeisCaps</groupId>
+                <groupId>org.sireum.hamr</groupId>
                 <artifactId>inspector-services-redis</artifactId>
                 <version>${inspector-services-redis.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.github.MatthewWeisCaps</groupId>
+                <groupId>org.sireum.hamr</groupId>
                 <artifactId>inspector-stream</artifactId>
                 <version>${inspector-stream.version}</version>
-                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
