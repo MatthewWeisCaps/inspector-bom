@@ -15,7 +15,7 @@
     <artifactId>inspector-bom</artifactId>
     <version>0.5-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Inspector BOM</name>
+    <name>inspector-bom</name>
     <description>Bill of materials to ensure consistent dependency versions for HAMR Inspector.</description>
     <url>https://github.com/sireum/kekinian</url>
     <organization>
@@ -35,6 +35,7 @@
         <maven.compiler.target>14</maven.compiler.target>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <virtual-reactor-hooks.version>0.2-SNAPSHOT</virtual-reactor-hooks.version>
         <inspector.version>0.5-SNAPSHOT</inspector.version>
         <inspector-capabilities.version>${inspector.version}</inspector-capabilities.version>
         <inspector-capabilities-redis.version>${inspector.version}</inspector-capabilities-redis.version>
@@ -68,42 +69,47 @@
                 <version>${art.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.sireum.hamr</groupId>
+                <groupId>org.sireum</groupId>
+                <artifactId>virtual-reactor-hooks</artifactId>
+                <version>${virtual-reactor-hooks.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.sireum</groupId>
                 <artifactId>inspector-capabilities</artifactId>
                 <version>${inspector-capabilities.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.sireum.hamr</groupId>
+                <groupId>org.sireum</groupId>
                 <artifactId>inspector-capabilities-redis</artifactId>
                 <version>${inspector-capabilities-redis.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.sireum.hamr</groupId>
+                <groupId>org.sireum</groupId>
                 <artifactId>inspector-common</artifactId>
                 <version>${inspector-common.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.sireum.hamr</groupId>
+                <groupId>org.sireum</groupId>
                 <artifactId>inspector-gui</artifactId>
                 <version>${inspector-gui.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.sireum.hamr</groupId>
+                <groupId>org.sireum</groupId>
                 <artifactId>inspector-services</artifactId>
                 <version>${inspector-services.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.sireum.hamr</groupId>
+                <groupId>org.sireum</groupId>
                 <artifactId>inspector-services-jvm</artifactId>
                 <version>${inspector-services-jvm.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.sireum.hamr</groupId>
+                <groupId>org.sireum</groupId>
                 <artifactId>inspector-services-redis</artifactId>
                 <version>${inspector-services-redis.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.sireum.hamr</groupId>
+                <groupId>org.sireum</groupId>
                 <artifactId>inspector-stream</artifactId>
                 <version>${inspector-stream.version}</version>
             </dependency>
