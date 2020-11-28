@@ -11,9 +11,9 @@
         <version>2.2.4.RELEASE</version>
         <relativePath/>
     </parent>
-    <groupId>org.sireum.hamr</groupId>
+    <groupId>org.sireum</groupId>
     <artifactId>inspector-bom</artifactId>
-    <version>0.5-SNAPSHOT</version>
+    <version>0.6-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>inspector-bom</name>
     <description>Bill of materials to ensure consistent dependency versions for HAMR Inspector.</description>
@@ -25,9 +25,9 @@
     <!-- todo licenses -->
     <!-- todo developers -->
     <properties>
-        <scala.version>2.12.11</scala.version>
-        <sireum.version>2257178</sireum.version>
-        <art.version>260fd0d</art.version>
+        <scala.version>2.13.3</scala.version>
+        <sireum.version>4.20201009.ec05fb7</sireum.version>
+        <scalac-plugin.version>4.20201120.a0b0eab</scalac-plugin.version>
 
         <!-- these properties, as well as the plugin configurations using them, are redeclared in every child due a jitpack quirk -->
         <java.version>11</java.version>
@@ -35,8 +35,9 @@
         <maven.compiler.target>11</maven.compiler.target>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <virtual-reactor-hooks.version>0.2-SNAPSHOT</virtual-reactor-hooks.version>
-        <inspector.version>0.5-SNAPSHOT</inspector.version>
+
+        <virtual-reactor-hooks.version>3.4.0-beta</virtual-reactor-hooks.version>
+        <inspector.version>0.6-SNAPSHOT</inspector.version>
         <inspector-capabilities.version>${inspector.version}</inspector-capabilities.version>
         <inspector-capabilities-redis.version>${inspector.version}</inspector-capabilities-redis.version>
         <inspector-common.version>${inspector.version}</inspector-common.version>
@@ -46,6 +47,7 @@
         <inspector-services-jvm.version>${inspector.version}</inspector-services-jvm.version>
         <inspector-stream.version>${inspector.version}</inspector-stream.version>
     </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -59,14 +61,11 @@
                 <version>1.7.30</version>
             </dependency>
             <dependency>
-                <groupId>org.sireum.runtime</groupId>
-                <artifactId>library_2.12</artifactId>
+                <groupId>org.sireum.kekinian</groupId>
+                <artifactId>slang-embedded-art_2.13</artifactId>
                 <version>${sireum.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.sireum.slang-embedded-art</groupId>
-                <artifactId>slang-embedded-art_2.12</artifactId>
-                <version>${art.version}</version>
+<!--                <scope>provided</scope>-->
+                <optional>true</optional>
             </dependency>
             <dependency>
                 <groupId>org.sireum</groupId>
@@ -153,7 +152,7 @@
                 <plugin>
                     <groupId>net.alchim31.maven</groupId>
                     <artifactId>scala-maven-plugin</artifactId>
-                    <version>4.3.1</version>
+                    <version>4.4.0</version>
                     <executions>
                         <execution>
                             <id>scala-compile-first</id>
@@ -172,6 +171,18 @@
                     </executions>
                     <configuration>
                         <scalaVersion>${scala.version}</scalaVersion>
+                        <scalaCompatVersion>2.13</scalaCompatVersion>
+                        <checkMultipleScalaVersions>true</checkMultipleScalaVersions>
+<!--                        <failOnMultipleScalaVersions>true</failOnMultipleScalaVersions>-->
+                        <compilerPlugins>
+                            <compilerPlugin>
+                                <groupId>org.sireum</groupId>
+                                <artifactId>scalac-plugin_2.13</artifactId>
+                                <version>${scalac-plugin.version}</version>
+                            </compilerPlugin>
+                        </compilerPlugins>
+                        <!-- todo perhaps change to "all" -->
+                        <recompileMode>incremental</recompileMode>
                     </configuration>
                 </plugin>
                 <plugin>
